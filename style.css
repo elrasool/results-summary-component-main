@@ -6,15 +6,286 @@
 }
 
 :root {
-  --light-red: hsl(0, 100%, 67%);
+  --light-red: hsla(0, 100%, 67%);
+  --light-red-alpha: hsla(0, 100%, 67%, 0.075);
   --orangey-yellow: hsl(39, 100%, 56%);
-  --green-teal: hsl(166, 100%, 37%);
-  --cobalt-blue: hsl(234, 85%, 45%);
+  --orangey-yellow-alpha: hsla(39, 100%, 56%, 0.075);
+  --green-teal: hsla(166, 100%, 37%);
+  --green-teal-alpha: hsla(166, 100%, 37%, 0.075);
+  --cobalt-blue: hsla(234, 85%, 45%);
+  --cobalt-blue-alpha: hsla(234, 85%, 45%, 0.075);
   --light-slate-blue: hsl(252, 100%, 67%);
   --light-royal-blue: hsl(241, 81%, 54%);
   --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
   --white: hsl(0, 0%, 100%);
-  --pale--blue: hsl(221, 100%, 96%);
-  --light--lavender: hsl(241, 100%, 89%);
-  --darkgray--blue: hsl(224, 30%, 27%);
+  --pale-blue: hsla(222, 100%, 96%, 0.689);
+  --light-lavender: hsla(241, 100%, 89%);
+  --light-lavender-alpha: hsla(241, 100%, 89%, 0.24);
+  --darkgray--blue: hsla(224, 30%, 27%, 0.799);
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  /* Start Left Section  */
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+    background-image: radial-gradient(
+      var(--light-slate-blue),
+      var(--light-royal-blue)
+    );
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px 20px;
+    color: var(--white);
+  }
+
+  .left-section h3 {
+    color: var(--pale-blue);
+  }
+
+  .left-section .circle-result {
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 40%;
+    color: var(--white);
+    background: linear-gradient(
+      180deg,
+      var(--violet-blue),
+      var(--persian-blue)
+    );
+  }
+
+  .left-section .circle-result .result {
+    font-size: 3rem;
+  }
+
+  .left-section .circle-result p {
+    color: var(--pale-blue);
+  }
+
+  .left-section p:last-child {
+    font-size: 18px;
+    text-align: center;
+    color: var(--pale-blue);
+  }
+
+  /*  End Left Section*/
+
+  /* Start Right Section*/
+
+  .right-section {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    /* border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; */
+  }
+
+  .right-section p {
+    color: var(--darkgray--blue);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 8px 0;
+  }
+
+  .right-section .single-component > div {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .right-section .single-component .reaction {
+    background-color: var(--light-red-alpha);
+  }
+
+  .right-section .single-component .reaction > span {
+    color: var(--light-red);
+  }
+
+  .right-section .single-component .memory {
+    background-color: var(--orangey-yellow-alpha);
+  }
+
+  .right-section .single-component .memory span {
+    color: var(--orangey-yellow);
+  }
+
+  .right-section .single-component .verbal {
+    background-color: var(--green-teal-alpha);
+  }
+
+  .right-section .single-component .verbal span {
+    color: var(--green-teal);
+  }
+
+  .right-section .single-component .visual {
+    background-color: var(--light-lavender-alpha);
+  }
+
+  .right-section .single-component .visual span {
+    color: var(--light-lavender);
+  }
+
+  button {
+    background-color: var(--darkgray--blue);
+    border-radius: 20px;
+    border: none;
+    color: var(--white);
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .main-container {
+    border-radius: 20px;
+    width: 60%;
+    height: 55vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+  }
+
+  /* Start Left Section  */
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    background-image: radial-gradient(
+      var(--light-slate-blue),
+      var(--light-royal-blue)
+    );
+    padding: 20px;
+    border-radius: 20px;
+    color: var(--white);
+  }
+
+  .left-section h3 {
+    color: var(--pale-blue);
+  }
+
+  .left-section .circle-result {
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 40%;
+    color: var(--white);
+    background: linear-gradient(
+      180deg,
+      var(--violet-blue),
+      var(--persian-blue)
+    );
+  }
+
+  .left-section .circle-result .result {
+    font-size: 3rem;
+  }
+
+  .left-section .circle-result p {
+    color: var(--pale-blue);
+  }
+
+  .left-section p:last-child {
+    font-size: 18px;
+    text-align: center;
+    color: var(--pale-blue);
+    width: 60%;
+  }
+
+  /*  End Left Section*/
+
+  /* Start Right Section*/
+
+  .right-section {
+    padding: 20px;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: stretch;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+   box-shadow: 20px 19px 28px var(--light-lavender-alpha);
+}
+  }
+
+  .right-section p {
+    color: var(--darkgray--blue);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 8px 0;
+  }
+
+  .right-section .single-component > div {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .right-section .single-component .reaction {
+    background-color: var(--light-red-alpha);
+  }
+
+  .right-section .single-component .reaction > span {
+    color: var(--light-red);
+  }
+
+  .right-section .single-component .memory {
+    background-color: var(--orangey-yellow-alpha);
+  }
+
+  .right-section .single-component .memory span {
+    color: var(--orangey-yellow);
+  }
+
+  .right-section .single-component .verbal {
+    background-color: var(--green-teal-alpha);
+  }
+
+  .right-section .single-component .verbal span {
+    color: var(--green-teal);
+  }
+
+  .right-section .single-component .visual {
+    background-color: var(--light-lavender-alpha);
+  }
+
+  .right-section .single-component .visual span {
+    color: var(--light-lavender);
+  }
+
+  button {
+    background-color: var(--darkgray--blue);
+    border-radius: 20px;
+    border: none;
+    color: var(--white);
+    padding: 10px;
+    margin-top: 30px;
+  }
 }
