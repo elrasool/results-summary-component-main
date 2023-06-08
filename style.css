@@ -92,8 +92,6 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    /* border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px; */
   }
 
   .right-section p {
@@ -225,10 +223,12 @@
     display: flex;
     width: 50%;
     flex-direction: column;
+    justify-content: space-around;
     align-items: stretch;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
    box-shadow: 20px 19px 28px var(--light-lavender-alpha);
+   height: 100%;
 }
   }
 
