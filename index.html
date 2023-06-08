@@ -1,47 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Results summary component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Mahmoud Elrasool | Results summary component</title>
+
 </head>
+
 <body>
 
-  Your Result
-  76
-  of 100
+  <main class="main-container">
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
+    <!-- Start the left section -->
+    <section class="left-section">
+      <h2>Your result</h2>
+      <div class="circle-result">
+        <h1 class="result"></h1>
+        <p class="off-result">of 100</p>
+      </div>
+      <h1 class="great">Great</h1>
+      <p>You Scored higher than 65% of the people who hav taken these tests. </p>
+    </section>
+    <!-- End the left section  -->
+    <!--  Start the right section -->
+    <section class="right-section">
+      <h2 class="summary">Summary</h2>
 
-  Reaction
-  80 / 100
 
-  Memory
-  92 / 100
+      <div class="single-component">
+        <div class="reaction">
+          <img src="./assets/images/icon-reaction.svg" />
+          <span>Reaction</span>
+          <p class="percentage"><span>80</span> / 100</p>
+        </div>
+      </div>
 
-  Verbal
-  61 / 100
+      <div class="single-component">
+        <div class="memory">
+          <img src="./assets/images/icon-memory.svg">
+          <span>Memory</span>
+          <p class="percentage"><span>80</span> / 100</p>
+        </div>
+      </div>
 
-  Visual
-  72 / 100
+      <div class="single-component">
+        <div class="verbal">
+          <img src="./assets/images/icon-verbal.svg">
+          <span>Verbal</span>
+          <p class="percentage"><span>80</span> / 100</p>
+        </div>
+      </div>
 
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <div class="single-component">
+        <div class="visual">
+          <img src="./assets/images/icon-visual.svg">
+          <span>Visual</span>
+          <p class="percentage"><span>80</span> / 100</p>
+        </div>
+      </div>
+
+      <button class="continue">Continue</button>
+    </section>
+    <!-- End the right section  -->
+  </main>
 </body>
+
 </html>
